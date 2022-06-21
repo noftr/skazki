@@ -4,8 +4,8 @@ ScrollTrigger.create({
     toggleClass: 'active',
     scroller: ".scroll-wrapper",
     start: 'top 60%',
-    end: 'top 40%',
+  //  end: 'top 40%',
     ease: "power4.out",
     markers: true,
-    scrub: 0.5,
+    toggleActions: "play reverse none none",
 });
