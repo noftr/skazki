@@ -7,4 +7,5 @@ ScrollTrigger.create({
     end: 'top 40%',
     ease: "power4.out",
     markers: true,
+    scrub: true
 });
