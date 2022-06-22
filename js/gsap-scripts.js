@@ -16,16 +16,16 @@ let animTrigger = ScrollTrigger.create({
 
 function onEnterFunc1() {
     gsap.to('.main-3s__text-container-1',{
-        scale: 10,
-        duration: 1,
+        color: "#FFEE50",
+        duration: .5,
         ease: "power3.inOut",
     });
 };
 
 function onLeaveFunc1() {
     gsap.to('.main-3s__text-container-1',{
-        scale: 1,
-        duration: 1,
+        color: "#FFFFFF",
+        duration: .5,
         ease: "power3.inOut",
     });
 };
