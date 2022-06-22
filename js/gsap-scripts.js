@@ -15,7 +15,7 @@ gsap.fromTo('.main-3s__text-container-1', { scale: 1 }, {
     scale: 10,
     duration: 1,
     ease: "power3.out",
-    scrollTrigger: animTrigger,
+    //scrollTrigger: animTrigger,
 });
 
 
