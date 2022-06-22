@@ -1,6 +1,6 @@
 
 
-gsap.to(document.getElementsByClassName(".main-3s__text-container-1"),{color: "#FFEE50", duration: .4, ease: "power3.inOut",
+gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFEE50", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
@@ -37,7 +37,7 @@ scrollTrigger: {
     toggleActions: "play reset reset reset",
 },});
 
-gsap.to(document.getElementsByClassName(".main-3s__text-container-1"),{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
+gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
@@ -74,7 +74,7 @@ scrollTrigger: {
     toggleActions: "reset play reset reset",
 },});
 
-gsap.to(document.getElementsByClassName(".main-3s__text-container-1"),{color: "#FFEE50", duration: .4, ease: "power3.inOut",
+gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFEE50", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
@@ -102,7 +102,7 @@ scrollTrigger: {
     toggleActions: "reset reset play reset",
 },});
 
-gsap.to(document.getElementsByClassName(".main-3s__text-container-1"),{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
+gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
