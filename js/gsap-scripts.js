@@ -11,22 +11,33 @@ let animTrigger = ScrollTrigger.create({
     onEnterBack: onEnterFunc1,
     onLeave: onLeaveFunc1,
     onLeaveBack: onLeaveFunc1,
-    // toggleClass: "active",
 });
 
 function onEnterFunc1() {
     gsap.to('.main-3s__text-container-1',{
         color: "#FFEE50",
-        duration: .5,
+        duration: .4,
         ease: "power3.inOut",
+    });
+    gsap.to('.main-3s__number-1',{
+        opacity: 1,
+        delay: .1,
+        duration: .3,
+        ease: "power3.out",
     });
 };
 
 function onLeaveFunc1() {
     gsap.to('.main-3s__text-container-1',{
         color: "#FFFFFF",
-        duration: .5,
+        duration: .4,
         ease: "power3.inOut",
+    });
+    gsap.to('.main-3s__number-1',{
+        opacity: 0,
+        delay: .1,
+        duration: .3,
+        ease: "power3.out",
     });
 };
 
