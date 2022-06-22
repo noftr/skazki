@@ -25,7 +25,7 @@ function onEnterFunc1() {
         ease: "power3.out",
     });
     gsap.fromTo(".main-3s__icon-1", {xPercent: 0}, {xPercent: 100, duration: .6, ease: "power3.inOut",});
-    gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {xPercent: 100, duration: 1, ease: "power3.inOut",});
+    gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: 100, duration: 1, ease: "power3.inOut",});
 };
 
 function onLeaveFunc1() {
@@ -41,7 +41,7 @@ function onLeaveFunc1() {
         ease: "power3.out",
     });
     gsap.to(".main-3s__icon-1", {xPercent: 200, duration: .6, ease: "power3.inOut",});
-    gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {xPercent: 100, duration: 1, ease: "power3.inOut",});
+    gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: 100, duration: 1, ease: "power3.inOut",});
 };
 
 
