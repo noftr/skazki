@@ -12,7 +12,7 @@
 //     onLeaveBack: onLeaveFuncBack1,
 // });
 
-function onEnterFunc1() {
+// function onEnterFunc1() {
     gsap.to('.main-3s__text-container-1',{color: "#FFEE50", duration: .4, ease: "power3.inOut",scrollTrigger: {
         trigger: '.main-3s__trigger-1',scroller: ".scroll-wrapper",
         start: 'top 53%',
@@ -41,7 +41,7 @@ function onEnterFunc1() {
         markers: true,
         toggleActions: "play none none none",
     },});
-};
+// };
 
 
 // scrollTrigger: {trigger: '.main-3s__trigger-1',scroller: ".scroll-wrapper",
