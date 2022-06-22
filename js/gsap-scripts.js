@@ -7,7 +7,7 @@ let animTrigger = ScrollTrigger.create({
     end: 'bottom 47%',
     ease: "power4.out",
     markers: true,
-    toggleActions: "play reverse play reverse",
+//    toggleActions: "play reverse play reverse",
     // toggleClass: "active",
 });
 
@@ -17,6 +17,7 @@ gsap.fromTo('.main-3s__text-container-1', { scale: 1 }, {
     duration: 1,
     ease: "power2.out",
     scrollTrigger: animTrigger,
+    toggleActions: "play reverse play reverse",
 });
 
 
