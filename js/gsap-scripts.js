@@ -24,7 +24,7 @@ function onEnterFunc1() {
 
 function onLeaveFunc1() {
     gsap.to('.main-3s__text-container-1',{
-        scale: 10,
+        scale: 1,
         duration: 1,
         ease: "power3.out",
     });
