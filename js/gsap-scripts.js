@@ -40,7 +40,7 @@ function onLeaveFunc1() {
         duration: .3,
         ease: "power3.out",
     });
-    gsap.fromTo(".main-3s__icon-1", {xPercent: -100}, {xPercent: 0, duration: .6, ease: "power3.inOut",});
+    gsap.fromTo(".main-3s__icon-1", {xPercent: 0}, {xPercent: 100, duration: .6, ease: "power3.inOut",});
 };
 
 
