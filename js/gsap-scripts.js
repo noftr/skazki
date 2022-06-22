@@ -14,5 +14,5 @@ gsap.fromTo('.main-3s__text-container-1', {scale: 1 }, {
         markers: true,
         toggleActions: "play reverse play reverse",
         // toggleClass: "active",
-    };
+    }
 });
