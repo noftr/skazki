@@ -20,7 +20,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "play complete complete complete",
+        toggleActions: "play reset reset reset",
     },});
     gsap.to('.main-3s__number-1',{opacity: 1, delay: .1, duration: .3, ease: "power3.out",
     scrollTrigger: {
@@ -29,7 +29,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "play complete complete complete",
+        toggleActions: "play reset reset reset",
     },});
     gsap.fromTo(".main-3s__icon-1", {xPercent: 0}, {xPercent: 100, duration: .6, ease: "power3.inOut",
     scrollTrigger: {
@@ -38,7 +38,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "play complete complete complete",
+        toggleActions: "play reset reset reset",
     },});
     gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: -100, duration: 1, ease: "power3.inOut",
     scrollTrigger: {
@@ -47,7 +47,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "play complete complete complete",
+        toggleActions: "play reset reset reset",
     },});
 // };
 
@@ -59,7 +59,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete play complete complete",
+        toggleActions: "reset play reset reset",
     },});
     gsap.to('.main-3s__number-1',{opacity: 0, delay: .1, duration: .3, ease: "power3.out",
     scrollTrigger: {
@@ -68,7 +68,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete play complete complete",
+        toggleActions: "reset play reset reset",
     },});
     gsap.fromTo(".main-3s__icon-1", {xPercent: 0}, {xPercent: 100, duration: .6, ease: "power3.inOut",
     scrollTrigger: {
@@ -77,7 +77,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete play complete complete",
+        toggleActions: "reset play reset reset",
     },});
     gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: -100, duration: 1, ease: "power3.inOut",
     scrollTrigger: {
@@ -86,7 +86,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete play complete complete",
+        toggleActions: "reset play reset reset",
     },});
 // };
 
@@ -98,7 +98,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete complete play complete",
+        toggleActions: "reset reset play reset",
     },});
     gsap.to('.main-3s__number-1',{opacity: 1, delay: .1, duration: .3, ease: "power3.out",
     scrollTrigger: {
@@ -107,7 +107,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete complete play complete",
+        toggleActions: "reset reset play reset",
     },});
     gsap.to(".main-3s__icon-1", {xPercent: 100, duration: .6, ease: "power3.inOut",
     scrollTrigger: {
@@ -116,7 +116,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete complete play complete",
+        toggleActions: "reset reset play reset",
     },});
 // };
 
@@ -128,7 +128,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete complete complete play",
+        toggleActions: "reset reset reset play",
     },});
     gsap.to('.main-3s__number-1',{opacity: 0, delay: .1, duration: .3, ease: "power3.out",
     scrollTrigger: {
@@ -137,7 +137,7 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete complete complete play",
+        toggleActions: "reset reset reset play",
     },});
     gsap.to(".main-3s__icon-1", {xPercent: 200, duration: .6, ease: "power3.inOut",
     scrollTrigger: {
@@ -146,6 +146,6 @@
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
-        toggleActions: "complete complete complete play",
+        toggleActions: "reset reset reset play",
     },});
 // };
