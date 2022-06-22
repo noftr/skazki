@@ -11,7 +11,7 @@ let animTrigger = ScrollTrigger.create({
 });
 
 
-test.fromTo('.main-3s__text-container-1', { scale: 1 }, {
+gsap.fromTo('.main-3s__text-container-1', { scale: 1 }, {
     scale: 10,
     duration: 1,
     ease: "power3.out",
