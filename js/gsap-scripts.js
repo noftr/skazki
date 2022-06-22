@@ -1,4 +1,3 @@
-
 let animTrigger = ScrollTrigger.create({
     trigger: '.main-3s__trigger-1',
     // animation: animationCard,
@@ -17,7 +16,7 @@ function onEnterFunc1() {
     gsap.to('.main-3s__text-container-1',{
         color: "#FFEE50",
         duration: .4,
-        ease: CustomEase.create("custom", "M0,0 C0.25,0.1 0.25,1 1,1"),
+        ease: "power3.inOut",
     });
     gsap.to('.main-3s__number-1',{
         opacity: 1,
@@ -25,14 +24,14 @@ function onEnterFunc1() {
         duration: .3,
         ease: "power3.out",
     });
-    gsap.fromTo(".main-3s__icon-1", {xPercent: -100}, {xPercent: 0, duration: .6, ease: CustomEase.create("custom", "M0,0 C0.25,0.1 0.25,1 1,1"),});
+    gsap.fromTo(".main-3s__icon-1", {xPercent: -100}, {xPercent: 0, duration: .6, ease: "power3.inOut",});
 };
 
 function onLeaveFunc1() {
     gsap.to('.main-3s__text-container-1',{
         color: "#FFFFFF",
         duration: .4,
-        ease: CustomEase.create("custom", "M0,0 C0.25,0.1 0.25,1 1,1"),
+        ease: "power3.inOut",
     });
     gsap.to('.main-3s__number-1',{
         opacity: 0,
@@ -40,7 +39,7 @@ function onLeaveFunc1() {
         duration: .3,
         ease: "power3.out",
     });
-    gsap.fromTo(".main-3s__icon-1", {xPercent: 0}, {xPercent: 100, duration: .6, ease: CustomEase.create("custom", "M0,0 C0.25,0.1 0.25,1 1,1"),});
+    gsap.fromTo(".main-3s__icon-1", {xPercent: 0}, {xPercent: 100, duration: .6, ease: "power3.inOut",});
 };
 
 
