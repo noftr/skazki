@@ -31,7 +31,7 @@ scrollTrigger: {
     markers: true,
     toggleActions: "restart none restart none",
 },});
-gsap.to(number,{color: "#FFEE50", duration: .6, ease: "power2.out",
+gsap.to(number,{color: "#FFEE50", delay: .3, duration: .6, ease: "power2.out",
 scrollTrigger: {
     trigger: trigger,
     scroller: ".scroll-wrapper",
@@ -40,24 +40,25 @@ scrollTrigger: {
     markers: true,
     toggleActions: "restart none restart none",
 },});
-gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
+gsap.to(icon, {xPercent: 200, duration: .6, ease: "power2.inOut",
 scrollTrigger: {
     trigger: trigger,
     scroller: ".scroll-wrapper",
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "restart none restart none",
+    toggleActions: "play reset play play",
 },});
-gsap.to(headWrapper,{yPercent: -100, duration: 1, ease: "power2.inOut",
+gsap.to(headContainer, {yPercent: -100, duration: 1, ease: "power2.inOut",
 scrollTrigger: {
     trigger: trigger,
     scroller: ".scroll-wrapper",
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "restart none restart none",
+    toggleActions: "play reset play reset",
 },});
+
 
 // on leave
 gsap.to(textContainer,{color: "#FFFFFF", duration: .6, ease: "power2.inOut",
@@ -78,7 +79,7 @@ scrollTrigger: {
     markers: true,
     toggleActions: "reset play reset play",
 },});
-gsap.to(number,{color: "#FFFFFF", duration: .6, ease: "power2.out",
+gsap.to(number,{color: "#FFFFFF", delay: .3, duration: .6, ease: "power2.out",
 scrollTrigger: {
     trigger: trigger,
     scroller: ".scroll-wrapper",
@@ -96,7 +97,7 @@ scrollTrigger: {
     markers: true,
     toggleActions: "reset play reset play",
 },});
-gsap.to(headContainer, {yPercent: -100, duration: 1, ease: "power2.inOut",
+gsap.to(headContainer, {yPercent: -200, duration: 1, ease: "power2.inOut",
 scrollTrigger: {
     trigger: trigger,
     scroller: ".scroll-wrapper",
