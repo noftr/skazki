@@ -25,7 +25,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "play none none none",
+    toggleActions: "play none reset none",
 },});
 gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: -100, duration: 1, ease: "power3.inOut",
 scrollTrigger: {
@@ -62,7 +62,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "none play none none",
+    toggleActions: "none play reset none",
 },});
 gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: -100, duration: 1, ease: "power3.inOut",
 scrollTrigger: {
