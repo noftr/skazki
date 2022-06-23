@@ -42,7 +42,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "play reset none none",
+    toggleActions: "play reset reset reset",
 },});
 
 // on leave
@@ -80,7 +80,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "reset play none none",
+    toggleActions: "reset play reset reset",
 },});
 
 // on enter back
