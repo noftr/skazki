@@ -2,7 +2,7 @@ let textContainer, trigger, number, icon, heading
 
 let countCycle
 
-let numCycle = 0;
+let numCycle = 1;
 
 textContainer = document.querySelectorAll('.main-3s__text-container')[numCycle];
 trigger = document.querySelectorAll('.main-3s__trigger')[numCycle];
