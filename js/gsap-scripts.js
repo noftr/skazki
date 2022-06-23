@@ -34,7 +34,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "play reset reset reset",
+    toggleActions: "play reset none none",
 },});
 
 gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
@@ -71,7 +71,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "reset play reset reset",
+    toggleActions: "reset play none none",
 },});
 
 gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFEE50", duration: .4, ease: "power3.inOut",
