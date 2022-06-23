@@ -29,7 +29,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "play reset play reset",
     },});
     gsap.to(number,{color: "#FFEE50", delay: .3, duration: .6, ease: "power2.out",
@@ -38,7 +38,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "restart none restart none",
     },});
     gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
@@ -47,7 +47,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "restart none restart none",
     },});
     gsap.to(headContainer, {yPercent: -100, duration: 1, ease: "power2.inOut",
@@ -56,7 +56,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "restart none restart none",
     },});
 
@@ -67,7 +67,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "reset play reset play",
     },});
     gsap.to(number,{opacity: 0, duration: .6, ease: "power2.out",
@@ -76,7 +76,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "reset play reset play",
     },});
     gsap.to(number,{color: "#FFFFFF", delay: .3, duration: .6, ease: "power2.out",
@@ -85,7 +85,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "reset play reset play",
     },});
     gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
@@ -94,7 +94,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "reset play reset play",
     },});
     gsap.to(headWrapper, {yPercent: -100, duration: 1, ease: "power2.inOut",
@@ -103,7 +103,7 @@ food.forEach((item, index) => {
         scroller: ".scroll-wrapper",
         start: 'top center',
         end: 'bottom center',
-        markers: true,
+        // markers: true,
         toggleActions: "none restart none restart",
     },});
 
