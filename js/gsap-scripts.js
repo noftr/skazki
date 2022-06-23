@@ -1,3 +1,5 @@
+// надо поставить переменную и куери селектор для каждого класса
+
 
 // on enter
 gsap.to('.main-3s__text-container-1',{color: "#FFEE50", duration: .4, ease: "power3.inOut",
@@ -34,7 +36,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "play none none none",
+    toggleActions: "play reset none none",
 },});
 
 // on leave
@@ -72,7 +74,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "none play none none",
+    toggleActions: "reset play none none",
 },});
 
 // on enter back
