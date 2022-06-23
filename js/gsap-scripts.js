@@ -3,6 +3,15 @@ let textContainer, trigger, number, icon, heading
 let countCycle
 let numCycle = 0;
 
+const food = ["🍔", "🍟", "🍦"]
+
+food.forEach((item, index) => {
+  console.log("Текущий элемент " + item);
+  console.log("Его индекс " + index);
+})
+
+
+
 textContainer = document.querySelectorAll('.main-3s__text-container')[numCycle];
 trigger = document.querySelectorAll('.main-3s__trigger')[numCycle];
 number = document.querySelectorAll('.main-3s__number')[numCycle];
