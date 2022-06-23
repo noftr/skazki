@@ -1,6 +1,6 @@
 
 
-gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFEE50", duration: .4, ease: "power3.inOut",
+gsap.to('.main-3s__text-container-1',{color: "#FFEE50", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
@@ -25,7 +25,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "play none reset none",
+    toggleActions: "play reset reset reset",
 },});
 gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: -100, duration: 1, ease: "power3.inOut",
 scrollTrigger: {
@@ -34,10 +34,10 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "play none none none",
+    toggleActions: "play reset reset reset",
 },});
 
-gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
+gsap.to('.main-3s__text-container-1',{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
@@ -62,7 +62,7 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "none play reset none",
+    toggleActions: "reset play reset reset",
 },});
 gsap.fromTo(".main-3s__head-wrapper-1", {yPercent: 0}, {yPercent: -100, duration: 1, ease: "power3.inOut",
 scrollTrigger: {
@@ -71,10 +71,10 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "none play none none",
+    toggleActions: "reset play reset reset",
 },});
 
-gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFEE50", duration: .4, ease: "power3.inOut",
+gsap.to('.main-3s__text-container-1',{color: "#FFEE50", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
@@ -102,7 +102,7 @@ scrollTrigger: {
     toggleActions: "reset reset play reset",
 },});
 
-gsap.to(document.querySelector(".main-3s__text-container-1"),{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
+gsap.to('.main-3s__text-container-1',{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
