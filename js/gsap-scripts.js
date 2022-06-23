@@ -55,7 +55,7 @@ scrollTrigger: {
     markers: true,
     toggleActions: "reset play reset reset",
 },});
-gsap.fromTo(".main-3s__icon-1", {xPercent: 0}, {xPercent: 100, duration: .6, ease: "power3.inOut",
+gsap.to(".main-3s__icon-1", {xPercent: 100, duration: .6, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
     scroller: ".scroll-wrapper",
