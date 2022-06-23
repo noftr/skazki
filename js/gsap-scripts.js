@@ -1,7 +1,7 @@
 let textContainer, trigger, number, icon, headContainer, headWrapper, iconWrapper
 
 
-const food = ["", "", ""]
+const food = ["1", "2", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3", "3"]
 
 food.forEach((item, index) => {
 
