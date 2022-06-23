@@ -64,7 +64,7 @@ scrollTrigger: {
     markers: true,
     toggleActions: "reset play reset play",
 },});
-gsap.to(icon, {xPercent: 100, duration: .6, ease: "power3.inOut",
+gsap.to(icon, {xPercent: 200, duration: .6, ease: "power3.inOut",
 scrollTrigger: {
     trigger: trigger,
     scroller: ".scroll-wrapper",
@@ -82,61 +82,3 @@ scrollTrigger: {
     markers: true,
     toggleActions: "reset play reset play",
 },});
-
-// on enter back
-// gsap.to(textContainer,{color: "#FFEE50", duration: .4, ease: "power3.inOut",
-// scrollTrigger: {
-//     trigger: trigger,
-//     scroller: ".scroll-wrapper",
-//     start: 'top 53%',
-//     end: 'bottom 47%',
-//     markers: true,
-//     toggleActions: "reset reset play reset",
-// },});
-// gsap.to(number,{opacity: 1, delay: .1, duration: .3, ease: "power3.out",
-// scrollTrigger: {
-//     trigger: trigger,
-//     scroller: ".scroll-wrapper",
-//     start: 'top 53%',
-//     end: 'bottom 47%',
-//     markers: true,
-//     toggleActions: "reset reset play reset",
-// },});
-// gsap.to(icon, {xPercent: 100, duration: .6, ease: "power3.inOut",
-// scrollTrigger: {
-//     trigger: trigger,
-//     scroller: ".scroll-wrapper",
-//     start: 'top 53%',
-//     end: 'bottom 47%',
-//     markers: true,
-//     toggleActions: "reset reset play reset",
-// },});
-
-// on leave back
-// gsap.to(textContainer,{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
-// scrollTrigger: {
-//     trigger: trigger,
-//     scroller: ".scroll-wrapper",
-//     start: 'top 53%',
-//     end: 'bottom 47%',
-//     markers: true,
-//     toggleActions: "reset reset reset play",
-// },});
-// gsap.to(number,{opacity: 0, delay: .1, duration: .3, ease: "power3.out",
-// scrollTrigger: {
-//     trigger: trigger,
-//     scroller: ".scroll-wrapper",
-//     start: 'top 53%',
-//     end: 'bottom 47%',
-//     markers: true,
-//     toggleActions: "reset reset reset play",
-// },});
-// gsap.to(icon, {xPercent: 200, duration: .6, ease: "power3.inOut",
-// scrollTrigger: {
-//     trigger: trigger,
-//     scroller: ".scroll-wrapper",
-//     start: 'top 53%',
-//     end: 'bottom 47%',
-//     markers: true,
-//     toggleActions: "reset reset reset play",
-// },});
