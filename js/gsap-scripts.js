@@ -1,5 +1,5 @@
 
-
+// on enter
 gsap.to('.main-3s__text-container-1',{color: "#FFEE50", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
@@ -34,9 +34,10 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "play reset reset reset",
+    toggleActions: "play none none none",
 },});
 
+// on leave
 gsap.to('.main-3s__text-container-1',{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
@@ -71,9 +72,10 @@ scrollTrigger: {
     start: 'top 53%',
     end: 'bottom 47%',
     markers: true,
-    toggleActions: "reset play reset reset",
+    toggleActions: "none play none none",
 },});
 
+// on enter back
 gsap.to('.main-3s__text-container-1',{color: "#FFEE50", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
@@ -102,6 +104,7 @@ scrollTrigger: {
     toggleActions: "reset reset play reset",
 },});
 
+// on leave back
 gsap.to('.main-3s__text-container-1',{color: "#FFFFFF", duration: .4, ease: "power3.inOut",
 scrollTrigger: {
     trigger: '.main-3s__trigger-1',
