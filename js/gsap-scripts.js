@@ -1,7 +1,6 @@
 let textContainer, trigger, number, icon, heading
 
 let countCycle
-
 let numCycle = 0;
 
 textContainer = document.querySelectorAll('.main-3s__text-container')[numCycle];
