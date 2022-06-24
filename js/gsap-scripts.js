@@ -46,7 +46,7 @@ food.forEach((item, index) => {
         end: 'bottom center',
         toggleActions: "restart none restart none",
     },});
-    gsap.to(headContainer, {yPercent: -100, duration: 1, ease: "power2.inOut",
+    gsap.to(headContainer, {yPercent: -100, duration: .6, ease: "power2.inOut",
     scrollTrigger: {
         trigger: trigger,
         scroller: ".scroll-wrapper",
@@ -88,13 +88,13 @@ food.forEach((item, index) => {
         end: 'bottom center',
         toggleActions: "reset play reset play",
     },});
-    gsap.to(headWrapper, {yPercent: -100, duration: 1, ease: "power2.inOut",
-    scrollTrigger: {
-        trigger: trigger,
-        scroller: ".scroll-wrapper",
-        start: 'top center',
-        end: 'bottom center',
-        toggleActions: "none restart none restart",
-    },});
+    // gsap.to(headWrapper, {yPercent: -100, duration: 1, ease: "power2.inOut",
+    // scrollTrigger: {
+    //     trigger: trigger,
+    //     scroller: ".scroll-wrapper",
+    //     start: 'top center',
+    //     end: 'bottom center',
+    //     toggleActions: "none restart none restart",
+    // },});
 
 })
