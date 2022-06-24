@@ -11,6 +11,7 @@ nationalities.forEach((item, index) => {
     // headContainer = document.querySelectorAll('.main-3s__head-container')[index];
     // headWrapper = document.querySelectorAll('.main-3s__head-wrapper')[index];
     photo = document.querySelectorAll('.main-3s__sticky-img')[index];
+    anchor = document.querySelectorAll('.main-3s__anchor')[index];
 
     // on enter
     gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
@@ -111,5 +112,7 @@ nationalities.forEach((item, index) => {
     //         end: 'bottom center',
     //         toggleActions: "none restart none restart",
     //     },});
+
+    textContainer.addEventListener("click", function(){anchor.scrollIntoView();}, false);
 
 })
