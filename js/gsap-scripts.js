@@ -11,7 +11,9 @@ nationalities.forEach((item, index) => {
     // headContainer = document.querySelectorAll('.main-3s__head-container')[index];
     // headWrapper = document.querySelectorAll('.main-3s__head-wrapper')[index];
     photo = document.querySelectorAll('.main-3s__sticky-img')[index];
-    anchor = document.querySelectorAll('.main-3s__anchor')[index];
+    // anchor = document.querySelectorAll('.main-3s__anchor')[index];
+    anchor = document.getElementsByClassName('main-3s__anchor')[index];
+
 
     // on enter
     gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
