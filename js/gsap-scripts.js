@@ -113,6 +113,8 @@ nationalities.forEach((item, index) => {
     //         toggleActions: "none restart none restart",
     //     },});
 
-    textContainer.addEventListener("click", function(){anchor.scrollIntoView();}, false);
-
+    textContainer.addEventListener("click", scrollToEl);
+    function scrollToEl() {
+        anchor.scrollIntoView();
+    };
 })
