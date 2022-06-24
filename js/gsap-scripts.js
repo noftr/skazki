@@ -13,7 +13,7 @@ nationalities.forEach((item, index) => {
     photo = document.querySelectorAll('.main-3s__sticky-img')[index];
 
     // on enter
-    gsap.to(photo,{opacity: 1, duration: 0.001, ease: 'none',
+    gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
         scrollTrigger: {
             trigger: trigger,
             scroller: ".scroll-wrapper",
@@ -29,7 +29,7 @@ nationalities.forEach((item, index) => {
             end: 'bottom center',
             toggleActions: "restart none restart none",
         },});
-    gsap.to(number,{opacity: 1, duration: .6, ease: "power2.out",
+    gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
         scrollTrigger: {
             trigger: trigger,
             scroller: ".scroll-wrapper",
@@ -63,7 +63,7 @@ nationalities.forEach((item, index) => {
     //     },});
 
     // on leave
-    gsap.to(photo,{opacity: 0, duration: 0.001, ease: 'none',
+    gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
         scrollTrigger: {
             trigger: trigger,
             scroller: ".scroll-wrapper",
@@ -79,7 +79,7 @@ nationalities.forEach((item, index) => {
             end: 'bottom center',
             toggleActions: "reset play reset play",
         },});
-    gsap.to(number,{opacity: 0, duration: .6, ease: "power2.out",
+    gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
         scrollTrigger: {
             trigger: trigger,
             scroller: ".scroll-wrapper",
