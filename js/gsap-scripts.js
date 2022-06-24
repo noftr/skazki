@@ -8,7 +8,7 @@ nationalities.forEach((item, index) => {
     number = document.querySelectorAll('.main-3s__number')[index];
     icon = document.querySelectorAll('.main-3s__icon')[index];
     iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
-    headContainer = document.querySelectorAll('.main-3s__head-container')[index];
+    // headContainer = document.querySelectorAll('.main-3s__head-container')[index];
     // headWrapper = document.querySelectorAll('.main-3s__head-wrapper')[index];
     photo = document.querySelectorAll('.main-3s__sticky-img')[index];
 
@@ -37,14 +37,14 @@ nationalities.forEach((item, index) => {
             end: 'bottom center',
             toggleActions: "play reset play reset",
         },});
-    gsap.to(number,{color: "#FFEE50", delay: .3, duration: .6, ease: "power2.out",
-        scrollTrigger: {
-            trigger: trigger,
-            scroller: ".scroll-wrapper",
-            start: 'top center',
-            end: 'bottom center',
-            toggleActions: "play none play none",
-        },});
+    // gsap.to(number,{color: "#FFEE50", delay: .3, duration: .6, ease: "power2.out",
+    //     scrollTrigger: {
+    //         trigger: trigger,
+    //         scroller: ".scroll-wrapper",
+    //         start: 'top center',
+    //         end: 'bottom center',
+    //         toggleActions: "play none play none",
+    //     },});
     gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
         scrollTrigger: {
             trigger: trigger,
@@ -87,14 +87,14 @@ nationalities.forEach((item, index) => {
             end: 'bottom center',
             toggleActions: "reset play reset play",
         },});
-    gsap.to(number,{color: "#FFFFFF", delay: .3, duration: .6, ease: "power2.out",
-        scrollTrigger: {
-            trigger: trigger,
-            scroller: ".scroll-wrapper",
-            start: 'top center',
-            end: 'bottom center',
-            toggleActions: "none play none play",
-        },});
+    // gsap.to(number,{color: "#FFFFFF", delay: .3, duration: .6, ease: "power2.out",
+    //     scrollTrigger: {
+    //         trigger: trigger,
+    //         scroller: ".scroll-wrapper",
+    //         start: 'top center',
+    //         end: 'bottom center',
+    //         toggleActions: "none play none play",
+    //     },});
     gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
         scrollTrigger: {
             trigger: trigger,
