@@ -53,14 +53,14 @@ nationalities.forEach((item, index) => {
             end: 'bottom center',
             toggleActions: "restart none restart none",
         },});
-    gsap.to(headContainer, {yPercent: -100, duration: .6, ease: "power2.inOut",
-        scrollTrigger: {
-            trigger: trigger,
-            scroller: ".scroll-wrapper",
-            start: 'top center',
-            end: 'bottom center',
-            toggleActions: "restart none restart none",
-        },});
+    // gsap.to(headContainer, {yPercent: -100, duration: .6, ease: "power2.inOut",
+    //     scrollTrigger: {
+    //         trigger: trigger,
+    //         scroller: ".scroll-wrapper",
+    //         start: 'top center',
+    //         end: 'bottom center',
+    //         toggleActions: "restart none restart none",
+    //     },});
 
     // on leave
     gsap.to(photo,{opacity: 0, duration: 0.001, ease: 'none',
