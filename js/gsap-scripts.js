@@ -43,7 +43,7 @@ nationalities.forEach((item, index) => {
             scroller: ".scroll-wrapper",
             start: 'top center',
             end: 'bottom center',
-            toggleActions: "restart none restart none",
+            toggleActions: "play none play none",
         },});
     gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
         scrollTrigger: {
@@ -93,7 +93,7 @@ nationalities.forEach((item, index) => {
             scroller: ".scroll-wrapper",
             start: 'top center',
             end: 'bottom center',
-            toggleActions: "reset play reset play",
+            toggleActions: "none play none play",
         },});
     gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
         scrollTrigger: {
