@@ -11,8 +11,8 @@ nationalities.forEach((item, index) => {
     // headContainer = document.querySelectorAll('.main-3s__head-container')[index];
     // headWrapper = document.querySelectorAll('.main-3s__head-wrapper')[index];
     photo = document.querySelectorAll('.main-3s__sticky-img')[index];
-    // anchor = document.querySelectorAll('.main-3s__anchor')[index];
-    anchor = document.getElementsByClassName('main-3s__anchor')[index];
+    anchor = document.querySelectorAll('.main-3s__anchor')[index];
+    // anchor = document.getElementsByClassName('main-3s__anchor')[index];
 
 
     // on enter
@@ -115,6 +115,7 @@ nationalities.forEach((item, index) => {
     //         toggleActions: "none restart none restart",
     //     },});
 
+    // ругается что внутри не работает
     textContainer.addEventListener("click", scrollToEl);
     function scrollToEl() {
         anchor.scrollIntoView();
