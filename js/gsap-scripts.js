@@ -153,7 +153,7 @@ function initLocomotiveScroll() {
 
       anchorArea.addEventListener("click", scrollToEl);
       function scrollToEl() {
-          locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index]);
+          locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], duration: 500);
       };
   })
 
