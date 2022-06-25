@@ -65,7 +65,7 @@ function initLocomotiveScroll() {
 
   nationalities.forEach((item, index) => {
 
-      textContainer = document.querySelectorAll('.main-3s__text-container')[index];
+      // textContainer = document.querySelectorAll('.main-3s__text-container')[index];
       trigger = document.querySelectorAll('.main-3s__trigger')[index];
       number = document.querySelectorAll('.main-3s__number')[index];
       icon = document.querySelectorAll('.main-3s__icon')[index];
@@ -84,7 +84,7 @@ function initLocomotiveScroll() {
               end: 'bottom center',
               toggleActions: "restart none restart none",
           },});
-      gsap.to(textContainer,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
+      gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
           scrollTrigger: {
               trigger: trigger,
               scroller: ".scroll-wrapper",
@@ -126,7 +126,7 @@ function initLocomotiveScroll() {
               end: 'bottom center',
               toggleActions: "reset play reset play",
           },});
-      gsap.to(textContainer,{color: "#FFFFFF", duration: .6, ease: "power2.inOut",
+      gsap.to(linkArea,{color: "#FFFFFF", duration: .6, ease: "power2.inOut",
           scrollTrigger: {
               trigger: trigger,
               scroller: ".scroll-wrapper",
