@@ -91,6 +91,7 @@ function initLocomotiveScroll() {
               end: 'bottom center',
               toggleActions: "restart none restart none",
               onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive),
+              onEnterBack: ({progress, direction, isActive}) => console.log(progress, direction, isActive),
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
