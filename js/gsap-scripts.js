@@ -130,7 +130,7 @@ function initLocomotiveScroll() {
               scroller: ".scroll-wrapper",
               start: 'top center',
               end: 'bottom center',
-              toggleActions: "reset play reset play",
+              toggleActions: "none play none play",
           },});
       gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
           scrollTrigger: {
