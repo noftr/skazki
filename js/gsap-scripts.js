@@ -91,10 +91,10 @@ function initLocomotiveScroll() {
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
-              onEnter: textContainer.style.pointerEvents = "auto",
-              onEnterBack: textContainer.style.pointerEvents = "auto",
-              onLeave: textContainer.style.pointerEvents = "none",
-              onLeaveBack: textContainer.style.pointerEvents = "none",
+              onEnter: () => textContainer.style.pointerEvents = "auto",
+              onEnterBack: () => textContainer.style.pointerEvents = "auto",
+              onLeave: () => textContainer.style.pointerEvents = "none",
+              onLeaveBack: () => textContainer.style.pointerEvents = "none",
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
