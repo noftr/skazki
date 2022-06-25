@@ -91,10 +91,6 @@ function initLocomotiveScroll() {
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
-              onEnter: () => linkArea.style.pointerEvents = "auto",
-              onEnterBack: () => linkArea.style.pointerEvents = "auto",
-              onLeave: () => linkArea.style.pointerEvents = "none",
-              onLeaveBack: () => linkArea.style.pointerEvents = "none",
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
@@ -111,6 +107,14 @@ function initLocomotiveScroll() {
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
+          },});
+      gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
+          scrollTrigger: {
+              trigger: trigger,
+              scroller: ".scroll-wrapper",
+              start: 'top center',
+              end: 'bottom center',
+              toggleActions: "play reset play reset",
           },});
 
       // on leave
