@@ -60,12 +60,11 @@ function initLocomotiveScroll() {
 
 
 
-  let textContainer, trigger, number, icon, headContainer, headWrapper, iconWrapper, anchorArea;
+  let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
   const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
 
   nationalities.forEach((item, index) => {
 
-      // textContainer = document.querySelectorAll('.main-3s__text-container')[index];
       trigger = document.querySelectorAll('.main-3s__trigger')[index];
       number = document.querySelectorAll('.main-3s__number')[index];
       icon = document.querySelectorAll('.main-3s__icon')[index];
@@ -73,7 +72,6 @@ function initLocomotiveScroll() {
       photo = document.querySelectorAll('.main-3s__sticky-img')[index];
       anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
       linkArea = document.querySelectorAll('.main-3s__link-area')[index];
-
 
       // on enter
       gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
