@@ -90,6 +90,7 @@ function initLocomotiveScroll() {
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
+              toggleClass: "active",
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
