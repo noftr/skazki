@@ -88,7 +88,7 @@ function initLocomotiveScroll() {
               scroller: ".scroll-wrapper",
               start: 'top center',
               end: 'bottom center',
-              toggleActions: "restart none restart none",
+              toggleActions: "play reverse play reverse",
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
@@ -124,14 +124,14 @@ function initLocomotiveScroll() {
               end: 'bottom center',
               toggleActions: "reset play reset play",
           },});
-      gsap.to(linkArea,{color: "#FFFFFF", duration: .6, ease: "power2.inOut",
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "none play none play",
-          },});
+      // gsap.to(linkArea,{color: "#FFFFFF", duration: .6, ease: "power2.inOut",
+      //     scrollTrigger: {
+      //         trigger: trigger,
+      //         scroller: ".scroll-wrapper",
+      //         start: 'top center',
+      //         end: 'bottom center',
+      //         toggleActions: "none play none play",
+      //     },});
       gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
           scrollTrigger: {
               trigger: trigger,
