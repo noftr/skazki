@@ -118,7 +118,7 @@ nationalities.forEach((item, index) => {
     // ругается что внутри не работает
     textContainer.addEventListener("click", scrollToEl);
     function scrollToEl() {
-        scroll.scrollTo(anchor, duration: 1000)
+        scroll.scrollTo(anchor);
         // anchor.scrollIntoView();
     };
 })
