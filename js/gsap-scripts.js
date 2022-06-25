@@ -90,8 +90,7 @@ function initLocomotiveScroll() {
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
-              onToggle: self => console.log("toggled, isActive:"),
-              // toggleClass: "active",
+              onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive),
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
