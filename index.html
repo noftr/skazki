@@ -30,9 +30,9 @@ body {
   overflow: hidden;
   height: 100vh;
   width: 100%;
-  position: fixed; 
-  top:0; 
-  left:0; 
+  position: fixed;
+  top:0;
+  left:0;
 }
 </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css">
@@ -571,87 +571,6 @@ body {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/resize-sensor@0.0.6/ResizeSensor.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-  <script>
-  // скрипт плавного скролла
-  gsap.registerPlugin(ScrollTrigger);
-  const mediaQuery = window.matchMedia('(min-width: 480px)');
-  const scrollWrapper = document.querySelector('.scroll-wrapper');
-  const scrollView = document.querySelector('.scroll-view');
-  if (mediaQuery.matches && !window.disableScroll && scrollWrapper) {
-    initLocomotiveScroll();
-  }
-  mediaQuery.addListener(() => window.location.reload());
-  function initLocomotiveScroll() {
-    window.addEventListener('scroll', e => {
-      console.log('scroll wrapper scroll', window.scrollY);
-    });
-    const locomotiveScroll = new LocomotiveScroll({
-      el: scrollWrapper,
-      smooth: true,
-      lerp: is_touch_enabled() ? 0.054 : 0.1,
-      touchMultiplier: 6.4, // эта скорость ок
-      tablet: {
-        smooth: true,
-      },
-      smartphone: {
-        smooth: true,
-      },
-    });
-    if (is_touch_enabled() && scrollView) {
-      locomotiveScroll.on('scroll', args => window.scrollTo(0, args.scroll.y));
-      scrollView.classList.add('-touchable');
-    } else {
-      console.log('touch event not found');
-    }
-    const onResizeContent = () => {
-      console.log('RESIZE');
-      locomotiveScroll.update();
-      if (is_touch_enabled()) {
-        document.body.style.height = locomotiveScroll.el.offsetHeight + 'px';
-      }
-    };
-    new ResizeSensor(scrollWrapper, onResizeContent);
-    setTimeout(() => onResizeContent, 300);
-    locomotiveScroll.on("scroll", ScrollTrigger.update);
-    window.addEventListener('load', onResizeContent);
-    ScrollTrigger.scrollerProxy(scrollWrapper, {
-      scrollTop(value) {
-        return arguments.length ? locomotiveScroll.scrollTo(value, 0, 0) : locomotiveScroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-      },
-      pinType: scrollWrapper.style.transform ? "transform" : "fixed"
-    });
-		// доскролливание до нужного места на странице 
-		// id="fixBtLeft" повесить на кнопку, а id="buyTable" повесить на место куда доскроллить
-		// текущие знаки строго соблюдать, знак решетки не удалять
-    // fixBtLeft.addEventListener("click", () => locomotiveScroll.scrollTo("#buyTable"));
-    function is_touch_enabled() {
-      return (
-        'ontouchstart' in window ||
-        navigator.maxTouchPoints > 0 ||
-        navigator.msMaxTouchPoints > 0
-      );
-    }
-    window.destroyLocomotiveScroll = function() {
-      if (locomotiveScroll) {
-        locomotiveScroll.destroy();
-        scrollView.classList.remove('-touchable');
-      }
-    }
-  }
-</script>
-  <script>
-// использовать если для всех элементов не проставлена высота
-window.addEventListener('load', ()=>{
-    const imagesWithLazyLoad = [...document.querySelectorAll("[loading='auto'], [loading='lazy']")]
-    imagesWithLazyLoad.forEach(el=>{
-      el.setAttribute('loading', 'eager')
-    })
-  })
-// if (window.destroyLocomotiveScroll) window.destroyLocomotiveScroll();
-</script>
-  <script src="https://skazki-sable.vercel.app/js/gsap-scripts.js"></script>
+  <script src="js/gsap-scripts.js"></script>
 </body>
 </html>
