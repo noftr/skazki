@@ -60,7 +60,7 @@ function initLocomotiveScroll() {
 
 
 
-  let textContainer, trigger, number, icon, headContainer, headWrapper, iconWrapper
+  let textContainer, trigger, number, icon, headContainer, headWrapper, iconWrapper, anchorArea;
   const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
 
   nationalities.forEach((item, index) => {
@@ -70,11 +70,8 @@ function initLocomotiveScroll() {
       number = document.querySelectorAll('.main-3s__number')[index];
       icon = document.querySelectorAll('.main-3s__icon')[index];
       iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
-      // headContainer = document.querySelectorAll('.main-3s__head-container')[index];
-      // headWrapper = document.querySelectorAll('.main-3s__head-wrapper')[index];
       photo = document.querySelectorAll('.main-3s__sticky-img')[index];
-      // anchor = document.querySelectorAll('.main-3s__anchor')[index];
-      // anchor = document.getElementsByClassName('main-3s__anchor')[index];
+      anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
 
 
       // on enter
@@ -145,13 +142,9 @@ function initLocomotiveScroll() {
               toggleActions: "reset play reset play",
           },});
 
-
-      // ругается что внутри не работает
-      textContainer.addEventListener("click", scrollToEl);
+      anchorArea.addEventListener("click", scrollToEl);
       function scrollToEl() {
-          console.log(index)
           locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index]);
-          // anchor.scrollIntoView();
       };
   })
 
