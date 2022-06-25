@@ -72,6 +72,7 @@ function initLocomotiveScroll() {
       iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
       photo = document.querySelectorAll('.main-3s__sticky-img')[index];
       anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
+      linkArea = document.querySelectorAll('.main-3s__link-area')[index];
 
 
       // on enter
@@ -90,8 +91,10 @@ function initLocomotiveScroll() {
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
-              onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive),
-              onEnterBack: ({progress, direction, isActive}) => console.log(progress, direction, isActive),
+              onEnter: textContainer.style.pointerEvents = "auto",
+              onEnterBack: textContainer.style.pointerEvents = "auto",
+              onLeave: textContainer.style.pointerEvents = "none",
+              onLeaveBack: textContainer.style.pointerEvents = "none",
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
