@@ -124,14 +124,6 @@ function initLocomotiveScroll() {
               end: 'bottom center',
               toggleActions: "reset play reset play",
           },});
-      // gsap.to(linkArea,{color: "#FFFFFF", duration: .6, ease: "power2.inOut",
-      //     scrollTrigger: {
-      //         trigger: trigger,
-      //         scroller: ".scroll-wrapper",
-      //         start: 'top center',
-      //         end: 'bottom center',
-      //         toggleActions: "none play none play",
-      //     },});
       gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
           scrollTrigger: {
               trigger: trigger,
@@ -158,22 +150,6 @@ function initLocomotiveScroll() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  // доскролливание до нужного места на странице
-  // id="fixBtLeft" повесить на кнопку, а id="buyTable" повесить на место куда доскроллить
-  // текущие знаки строго соблюдать, знак решетки не удалять
-  // fixBtLeft.addEventListener("click", () => locomotiveScroll.scrollTo("#buyTable"));
   function is_touch_enabled() {
     return (
       'ontouchstart' in window ||
