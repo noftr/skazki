@@ -51,7 +51,7 @@ function initLocomotiveScroll() {
     pinType: scrollWrapper.style.transform ? "transform" : "fixed"
   });
 
-let scrollerPage = '.scroll-wrapper';
+
 
 if (document.documentElement.clientWidth < 480){
   scrollerPage = document.querySelector('html');
@@ -84,6 +84,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
+              markers: true,
           },});
       gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
           scrollTrigger: {
@@ -92,6 +93,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "play reverse play reverse",
+              markers: true,
           },});
       gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
           scrollTrigger: {
@@ -100,6 +102,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "play reset play reset",
+              markers: true,
           },});
       gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
           scrollTrigger: {
@@ -108,6 +111,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
+              markers: true,
           },});
       gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
           scrollTrigger: {
@@ -116,6 +120,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "play reset play reset",
+              markers: true,
           },});
 
       // on leave
@@ -126,6 +131,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "reset play reset play",
+              markers: true,
           },});
       gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
           scrollTrigger: {
@@ -134,6 +140,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "reset play reset play",
+              markers: true,
           },});
       gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
           scrollTrigger: {
@@ -142,6 +149,7 @@ if (document.documentElement.clientWidth < 480){
               start: 'top center',
               end: 'bottom center',
               toggleActions: "reset play reset play",
+              markers: true,
           },});
 
       anchorArea.addEventListener("click", scrollToEl);
