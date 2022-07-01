@@ -7,7 +7,6 @@ if(window.screen.width > 991) {
 
     let textContainer, trigger, number, icon, heading
 
-    // надо поставить переменную и куери селектор для каждого класса
     textContainer = document.querySelectorAll('.main-3s__text-container')[0];
     trigger = document.querySelectorAll('.main-3s__trigger')[0];
     number = document.querySelectorAll('.main-3s__number')[0];
@@ -96,7 +95,7 @@ if(window.screen.width > 991) {
 
     let textContainer, trigger, number, icon, heading
 
-    // надо поставить переменную и куери селектор для каждого класса
+    scrollerEl = document.querySelector(html);
     textContainer = document.querySelectorAll('.main-3s__text-container')[0];
     trigger = document.querySelectorAll('.main-3s__trigger')[0];
     number = document.querySelectorAll('.main-3s__number')[0];
@@ -109,7 +108,7 @@ if(window.screen.width > 991) {
     gsap.to(textContainer,{color: "#FFEE50", duration: .4, ease: "power2.inOut",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
@@ -118,7 +117,7 @@ if(window.screen.width > 991) {
     gsap.to(number,{opacity: 1, delay: .2, duration: .7, ease: "power2.out",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
@@ -127,7 +126,7 @@ if(window.screen.width > 991) {
     gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
@@ -136,7 +135,7 @@ if(window.screen.width > 991) {
     gsap.to(headWrapper,{yPercent: -100, duration: 1, ease: "power2.inOut",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
@@ -147,7 +146,7 @@ if(window.screen.width > 991) {
     gsap.to(textContainer,{color: "#FFFFFF", duration: .4, ease: "power2.inOut",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
@@ -156,7 +155,7 @@ if(window.screen.width > 991) {
     gsap.to(number,{opacity: 0, delay: .2, duration: .7, ease: "power2.out",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
@@ -165,7 +164,7 @@ if(window.screen.width > 991) {
     gsap.to(icon, {xPercent: 200, duration: .6, ease: "power2.inOut",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
@@ -174,7 +173,7 @@ if(window.screen.width > 991) {
     gsap.to(headContainer, {yPercent: -100, duration: 1, ease: "power2.inOut",
     scrollTrigger: {
         trigger: trigger,
-        scroller: ".scroll-wrapper",
+        scroller: scrollerEl,
         start: 'top 53%',
         end: 'bottom 47%',
         markers: true,
