@@ -171,6 +171,7 @@ function initLocomotiveScroll() {
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "restart none restart none",
+                  markers: true,
               },});
           gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
               scrollTrigger: {
