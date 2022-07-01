@@ -58,95 +58,186 @@ function initLocomotiveScroll() {
 
 
 
+  if(window.screen.width > 991) {
 
+      let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
+      const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
 
-  let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
-  const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
+      nationalities.forEach((item, index) => {
 
-  nationalities.forEach((item, index) => {
+          trigger = document.querySelectorAll('.main-3s__trigger')[index];
+          number = document.querySelectorAll('.main-3s__number')[index];
+          icon = document.querySelectorAll('.main-3s__icon')[index];
+          iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
+          photo = document.querySelectorAll('.main-3s__sticky-img')[index];
+          anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
+          linkArea = document.querySelectorAll('.main-3s__link-area')[index];
 
-      trigger = document.querySelectorAll('.main-3s__trigger')[index];
-      number = document.querySelectorAll('.main-3s__number')[index];
-      icon = document.querySelectorAll('.main-3s__icon')[index];
-      iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
-      photo = document.querySelectorAll('.main-3s__sticky-img')[index];
-      anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
-      linkArea = document.querySelectorAll('.main-3s__link-area')[index];
+          // on enter
+          gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "restart none restart none",
+              },});
+          gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "play reverse play reverse",
+              },});
+          gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "play reset play reset",
+              },});
+          gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "restart none restart none",
+              },});
+          gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "play reset play reset",
+              },});
 
-      // on enter
-      gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "restart none restart none",
-          },});
-      gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "play reverse play reverse",
-          },});
-      gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "play reset play reset",
-          },});
-      gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "restart none restart none",
-          },});
-      gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "play reset play reset",
-          },});
+          // on leave
+          gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "reset play reset play",
+              },});
+          gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "reset play reset play",
+              },});
+          gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: ".scroll-wrapper",
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "reset play reset play",
+              },});
 
-      // on leave
-      gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "reset play reset play",
-          },});
-      gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "reset play reset play",
-          },});
-      gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
-          scrollTrigger: {
-              trigger: trigger,
-              scroller: ".scroll-wrapper",
-              start: 'top center',
-              end: 'bottom center',
-              toggleActions: "reset play reset play",
-          },});
+          anchorArea.addEventListener("click", scrollToEl);
+          function scrollToEl() {
+              locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], {'duration': 500});
+          };
+      })
 
-      anchorArea.addEventListener("click", scrollToEl);
-      function scrollToEl() {
-          locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], {'duration': 500});
-      };
-  })
+  } else {
 
+      let scrollerEl = document.querySelector(html);
+      let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
+      const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
+
+      nationalities.forEach((item, index) => {
+
+          trigger = document.querySelectorAll('.main-3s__trigger')[index];
+          number = document.querySelectorAll('.main-3s__number')[index];
+          icon = document.querySelectorAll('.main-3s__icon')[index];
+          iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
+          photo = document.querySelectorAll('.main-3s__sticky-img')[index];
+          anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
+          linkArea = document.querySelectorAll('.main-3s__link-area')[index];
+
+          // on enter
+          gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "restart none restart none",
+              },});
+          gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "play reverse play reverse",
+              },});
+          gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "play reset play reset",
+              },});
+          gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "restart none restart none",
+              },});
+          gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "play reset play reset",
+              },});
+
+          // on leave
+          gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "reset play reset play",
+              },});
+          gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "reset play reset play",
+              },});
+          gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
+              scrollTrigger: {
+                  trigger: trigger,
+                  scroller: scrollerEl,
+                  start: 'top center',
+                  end: 'bottom center',
+                  toggleActions: "reset play reset play",
+              },});
+
+          anchorArea.addEventListener("click", scrollToEl);
+          function scrollToEl() {
+              locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], {'duration': 500});
+          };
+      })
+
+  }
 
 
 
