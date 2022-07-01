@@ -227,7 +227,7 @@ if(window.screen.width < 992) {
         anchorArea.addEventListener("click", scrollToEl);
         function scrollToEl() {
             let anchorPoint = document.querySelectorAll('.main-3s__anchor')[index];
-            anchorPoint.scrollIntoView();
+            anchorPoint.scrollIntoView({behavior: "smooth"});
             // window.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], {'duration': 500});
         };
     })
