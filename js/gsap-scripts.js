@@ -194,23 +194,23 @@ if(window.screen.width < 992) {
         gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
+                start: 'top 80%',
+                end: 'bottom 80%',
                 toggleActions: "restart none restart none",
                 markers: true,
             },});
         gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
+                start: 'top 80%',
+                end: 'bottom 80%',
                 toggleActions: "play reverse play reverse",
             },});
         gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
+                start: 'top 80%',
+                end: 'bottom 80%',
                 toggleActions: "play reset play reset",
             },});
 
@@ -218,8 +218,8 @@ if(window.screen.width < 992) {
         gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
+                start: 'top 80%',
+                end: 'bottom 80%',
                 toggleActions: "reset play reset play",
             },});
 
