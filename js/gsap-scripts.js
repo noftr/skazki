@@ -167,7 +167,6 @@ function initLocomotiveScroll() {
           gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "restart none restart none",
@@ -176,7 +175,6 @@ function initLocomotiveScroll() {
           gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "play reverse play reverse",
@@ -184,7 +182,6 @@ function initLocomotiveScroll() {
           gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "play reset play reset",
@@ -192,7 +189,6 @@ function initLocomotiveScroll() {
           gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "restart none restart none",
@@ -200,7 +196,6 @@ function initLocomotiveScroll() {
           gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "play reset play reset",
@@ -210,7 +205,6 @@ function initLocomotiveScroll() {
           gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "reset play reset play",
@@ -218,7 +212,6 @@ function initLocomotiveScroll() {
           gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "reset play reset play",
@@ -226,7 +219,6 @@ function initLocomotiveScroll() {
           gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
               scrollTrigger: {
                   trigger: trigger,
-                  scroller: scrollerEl,
                   start: 'top center',
                   end: 'bottom center',
                   toggleActions: "reset play reset play",
