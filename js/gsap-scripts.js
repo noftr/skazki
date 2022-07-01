@@ -186,7 +186,6 @@ if(window.screen.width < 992) {
     nationalities.forEach((item, index) => {
 
         trigger = document.querySelectorAll('.main-3s__trigger')[index];
-        number = document.querySelectorAll('.main-3s__number')[index];
         icon = document.querySelectorAll('.main-3s__icon')[index];
         iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
         photo = document.querySelectorAll('.main-3s__sticky-img')[index];
@@ -209,13 +208,6 @@ if(window.screen.width < 992) {
                 end: 'bottom center',
                 toggleActions: "play reverse play reverse",
             },});
-        gsap.to(number,{opacity: 1, duration: .001, ease: "power2.out",
-            scrollTrigger: {
-                trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
-                toggleActions: "play reset play reset",
-            },});
         gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
             scrollTrigger: {
                 trigger: trigger,
@@ -233,13 +225,6 @@ if(window.screen.width < 992) {
 
         // on leave
         gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
-            scrollTrigger: {
-                trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
-                toggleActions: "reset play reset play",
-            },});
-        gsap.to(number,{opacity: 0, duration: .001, ease: "power2.out",
             scrollTrigger: {
                 trigger: trigger,
                 start: 'top center',
