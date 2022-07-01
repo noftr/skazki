@@ -186,8 +186,6 @@ if(window.screen.width < 992) {
     nationalities.forEach((item, index) => {
 
         trigger = document.querySelectorAll('.main-3s__trigger')[index];
-        icon = document.querySelectorAll('.main-3s__icon')[index];
-        iconWrapper = document.querySelectorAll('.main-3s__icon-wrapper')[index];
         photo = document.querySelectorAll('.main-3s__sticky-img')[index];
         anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
         linkArea = document.querySelectorAll('.main-3s__link-area')[index];
@@ -208,13 +206,6 @@ if(window.screen.width < 992) {
                 end: 'bottom center',
                 toggleActions: "play reverse play reverse",
             },});
-        gsap.to(icon, {xPercent: 100, duration: .6, ease: "power2.inOut",
-            scrollTrigger: {
-                trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
-                toggleActions: "restart none restart none",
-            },});
         gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
             scrollTrigger: {
                 trigger: trigger,
@@ -231,13 +222,7 @@ if(window.screen.width < 992) {
                 end: 'bottom center',
                 toggleActions: "reset play reset play",
             },});
-        gsap.to(iconWrapper,{xPercent: 100, duration: .6, ease: "power2.inOut",
-            scrollTrigger: {
-                trigger: trigger,
-                start: 'top center',
-                end: 'bottom center',
-                toggleActions: "reset play reset play",
-            },});
+
 
         anchorArea.addEventListener("click", scrollToEl);
         function scrollToEl() {
