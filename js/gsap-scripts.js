@@ -1,4 +1,4 @@
-// скрипт плавного скролла
+
 gsap.registerPlugin(ScrollTrigger);
 const mediaQuery = window.matchMedia('(min-width: 992px)');
 const scrollWrapper = document.querySelector('.scroll-wrapper');
@@ -45,15 +45,6 @@ function initLocomotiveScroll() {
       },
       pinType: scrollWrapper.style.transform ? "transform" : "fixed"
   });
-
-
-
-
-
-
-
-
-
 
   let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
   const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
@@ -142,12 +133,6 @@ function initLocomotiveScroll() {
       };
   })
 
-
-
-
-
-
-
   function is_touch_enabled() {
     return (
       'ontouchstart' in window ||
@@ -163,20 +148,12 @@ function initLocomotiveScroll() {
   }
 }
 
-// использовать если для всех элементов не проставлена высота
 window.addEventListener('load', ()=>{
   const imagesWithLazyLoad = [...document.querySelectorAll("[loading='auto'], [loading='lazy']")]
   imagesWithLazyLoad.forEach(el=>{
     el.setAttribute('loading', 'eager')
   })
 })
-// if (window.destroyLocomotiveScroll) window.destroyLocomotiveScroll();
-
-
-
-
-
-
 
 if(window.screen.width < 992) {
 
@@ -235,7 +212,7 @@ if(window.screen.width < 992) {
         function scrollToEl() {
             let anchorPoint = document.querySelectorAll('.main-3s__anchor')[index];
             anchorPoint.scrollIntoView({behavior: "smooth"});
-            // window.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], {'duration': 500});
+
         };
     })
 
