@@ -197,7 +197,6 @@ if(window.screen.width < 992) {
                 start: 'top 80%',
                 end: 'bottom 80%',
                 toggleActions: "restart none restart none",
-                markers: true,
             },});
         gsap.to(linkArea,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
             scrollTrigger: {
