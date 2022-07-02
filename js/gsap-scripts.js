@@ -189,6 +189,7 @@ if(window.screen.width < 992) {
         photo = document.querySelectorAll('.main-3s__sticky-img')[index];
         anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
         linkArea = document.querySelectorAll('.main-3s__link-area')[index];
+        icon = document.querySelectorAll('.main-3s__mob-icon-container')[index];
 
         // on enter
         gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
@@ -205,6 +206,13 @@ if(window.screen.width < 992) {
                 end: 'bottom 80%',
                 toggleActions: "play reverse play reverse",
             },});
+        gsap.to(icon,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
+          scrollTrigger: {
+              trigger: trigger,
+              start: 'top 80%',
+              end: 'bottom 80%',
+              toggleActions: "play reverse play reverse",
+          },});
         gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
             scrollTrigger: {
                 trigger: trigger,
