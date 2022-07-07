@@ -58,6 +58,8 @@ function initLocomotiveScroll() {
       photo = document.querySelectorAll('.main-3s__sticky-img')[index];
       anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
       linkArea = document.querySelectorAll('.main-3s__link-area')[index];
+      textComing = document.querySelectorAll('.main-3s__text-coming')[index];
+
 
       // on enter
       gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
@@ -67,6 +69,14 @@ function initLocomotiveScroll() {
               start: 'top center',
               end: 'bottom center',
               toggleActions: "restart none restart none",
+          },});
+      gsap.to(textComing,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
+          scrollTrigger: {
+              trigger: trigger,
+              scroller: ".scroll-wrapper",
+              start: 'top center',
+              end: 'bottom center',
+              toggleActions: "play reverse play reverse",
           },});
       gsap.to(linkArea,{color: "#FFEE50", duration: .6, ease: "power2.inOut",
           scrollTrigger: {
@@ -167,6 +177,7 @@ if(window.screen.width < 992) {
         anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
         linkArea = document.querySelectorAll('.main-3s__link-area')[index];
         icon = document.querySelectorAll('.main-3s__mob-icon-container')[index];
+        textComing = document.querySelectorAll('.main-3s__text-coming')[index];
 
         // on enter
         gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
@@ -177,6 +188,13 @@ if(window.screen.width < 992) {
                 toggleActions: "restart none restart none",
             },});
         gsap.to(linkArea,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: trigger,
+                start: 'top 80%',
+                end: 'bottom 80%',
+                toggleActions: "play reverse play reverse",
+            },});
+        gsap.to(textComing,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
             scrollTrigger: {
                 trigger: trigger,
                 start: 'top 80%',
