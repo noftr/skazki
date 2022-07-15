@@ -69,7 +69,7 @@ function initLocomotiveScroll() {
 
 
 
-      scroll.on('scroll', (args) => {
+      locomotiveScroll.on('scroll', (args) => {
           // Get all current elements : args.currentElements
           if(typeof args.currentElements['triggerSection'] === 'object') {
               let progress = args.currentElements['triggerSection'].progress;
