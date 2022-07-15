@@ -244,8 +244,8 @@ ScrollTrigger.create({
   end: 'bottom 80%',
   // onEnter: setTrigger2,
   // onEnterBack: setTrigger2,
-  onLeave: setTrigger0,
-  onLeaveBack: setTrigger0,
+  onLeave: fixGsap,
+  onLeaveBack: fixGsap,
 });
 
 function fixGsap() {
