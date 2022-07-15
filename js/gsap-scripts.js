@@ -74,7 +74,7 @@ function initLocomotiveScroll() {
                   nationalities.forEach((item, index) => {
                       document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
                   });
-              } if else (progress <= 0.1){
+              } else if (progress <= 0.1){
                   console.log('aaaaaa');
                   nationalities.forEach((item, index) => {
                       document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
