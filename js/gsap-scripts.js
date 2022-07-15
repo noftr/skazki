@@ -8,6 +8,8 @@ if (mediaQuery.matches && !window.disableScroll && scrollWrapper) {
 }
 mediaQuery.addListener(() => window.location.reload());
 
+const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+
 function initLocomotiveScroll() {
   window.addEventListener('scroll', e => {
     console.log('scroll wrapper scroll', window.scrollY);
@@ -47,7 +49,6 @@ function initLocomotiveScroll() {
   });
 
   let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
-  const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
 
   nationalities.forEach((item, index) => {
 
