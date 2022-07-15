@@ -65,6 +65,10 @@ function initLocomotiveScroll() {
 
 
 
+
+
+      // fix bug with GSAP
+
       locomotiveScroll.on('scroll', (args) => {
           if(typeof args.currentElements['triggerSection'] === 'object') {
               let progress = args.currentElements['triggerSection'].progress;
