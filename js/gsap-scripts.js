@@ -73,7 +73,7 @@ function initLocomotiveScroll() {
           // Get all current elements : args.currentElements
           if(typeof args.currentElements['triggerSection'] === 'object') {
               let progress = args.currentElements['triggerSection'].progress;
-              // console.log(progress);
+              console.log(progress);
               // ouput log example: 0.34
               // gsap example : myGsapAnimation.progress(progress);
           }
