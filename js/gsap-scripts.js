@@ -253,6 +253,7 @@ ScrollTrigger.create({
 function fixGsap() {
     nationalities.forEach((item, index) => {
         console.log(index);
+        let nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
         document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
     });
 }
