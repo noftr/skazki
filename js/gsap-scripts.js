@@ -237,27 +237,31 @@ if(window.screen.width < 992) {
 
 }
 
-// ScrollTrigger.create({
-//   trigger: ".trigger__slide-is2",
-//   scroller: scrollerPage,
-//   start: "top center",
-//   end: "bottom center",
-//   onEnter: setTrigger2,
-//   onEnterBack: setTrigger2,
-//   onLeave: setTrigger0,
-//   onLeaveBack: setTrigger0,
-// });
-
-// document.querySelectorAll('.main-3s__sticky-img').style.opacity = "0";
-
-let wrapper3s = document.querySelector('.main-3s')
-gsap.to(document.querySelectorAll('.main-3s__sticky-img'),{opacity: 0, duration: .001, ease: 'none',
-    scrollTrigger: {
-        trigger: wrapper3s,
-        scroller: ".scroll-wrapper",
-        markers: true,
-        start: 'top 0%',
-        end: 'bottom 80%',
-        toggleActions: "reset play reset play",
-    },
+ScrollTrigger.create({
+  trigger: ".trigger__slide-is2",
+  scroller: ".scroll-wrapper",
+  start: 'top 0%',
+  end: 'bottom 80%',
+  // onEnter: setTrigger2,
+  // onEnterBack: setTrigger2,
+  onLeave: setTrigger0,
+  onLeaveBack: setTrigger0,
 });
+
+function fixGsap() {
+    console.log('вышли');
+    document.querySelectorAll('.main-3s__sticky-img').style.opacity = "0";
+}
+
+
+// let wrapper3s = document.querySelector('.main-3s')
+// gsap.to(document.querySelectorAll('.main-3s__sticky-img'),{opacity: 0, duration: .001, ease: 'none',
+//     scrollTrigger: {
+//         trigger: wrapper3s,
+//         scroller: ".scroll-wrapper",
+//         markers: true,
+//         start: 'top 0%',
+//         end: 'bottom 80%',
+//         toggleActions: "reset play reset play",
+//     },
+// });
