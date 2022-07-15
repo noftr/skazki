@@ -183,45 +183,46 @@ if(window.screen.width < 992) {
         gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top 80%',
-                end: 'bottom 80%',
+                start: 'top center',
+                end: 'bottom center',
                 toggleActions: "restart none restart none",
             },});
         gsap.to(linkArea,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top 80%',
-                end: 'bottom 80%',
+                start: 'top center',
+                end: 'bottom center',
                 toggleActions: "play reverse play reverse",
             },});
         gsap.to(textComing,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top 80%',
-                end: 'bottom 80%',
+                start: 'top center',
+                end: 'bottom center',
                 toggleActions: "play reverse play reverse",
             },});
         gsap.to(icon,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
           scrollTrigger: {
               trigger: trigger,
-              start: 'top 80%',
-              end: 'bottom 80%',
+              start: 'top center',
+              end: 'bottom center',
               toggleActions: "play reverse play reverse",
           },});
         gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top 80%',
-                end: 'bottom 80%',
+                start: 'top center',
+                end: 'bottom center',
                 toggleActions: "play reset play reset",
             },});
+
 
         // on leave
         gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top 80%',
-                end: 'bottom 80%',
+                start: 'top center',
+                end: 'bottom center',
                 toggleActions: "reset play reset play",
             },});
 
