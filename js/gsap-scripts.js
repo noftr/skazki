@@ -143,6 +143,24 @@ function initLocomotiveScroll() {
       function scrollToEl() {
           locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], {'duration': 500});
       };
+
+
+      // fix bug with GSAP
+      ScrollTrigger.create({
+        trigger: ".trigger__slide-is2",
+        scroller: ".scroll-wrapper",
+        start: 'top 0%',
+        end: 'bottom 80%',
+        onLeave: fixGsap,
+        onLeaveBack: fixGsap,
+      });
+
+      function fixGsap() {
+          nationalities.forEach((item, index) => {
+              document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+          });
+      }
+
   })
 
   function is_touch_enabled() {
@@ -229,6 +247,23 @@ if(window.screen.width < 992) {
             },});
 
 
+
+        // fix bug with GSAP
+        ScrollTrigger.create({
+          trigger: ".trigger__slide-is2",
+          start: 'top 0%',
+          end: 'bottom 80%',
+          onLeave: fixGsap,
+          onLeaveBack: fixGsap,
+        });
+
+        function fixGsap() {
+            nationalities.forEach((item, index) => {
+                document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+            });
+        }
+
+
         anchorArea.addEventListener("click", scrollToEl);
         function scrollToEl() {
             let anchorPoint = document.querySelectorAll('.main-3s__anchor')[index];
@@ -239,24 +274,6 @@ if(window.screen.width < 992) {
 
 }
 
-ScrollTrigger.create({
-  trigger: ".trigger__slide-is2",
-  scroller: ".scroll-wrapper",
-  start: 'top 0%',
-  end: 'bottom 80%',
-  // onEnter: setTrigger2,
-  // onEnterBack: setTrigger2,
-  onLeave: fixGsap,
-  onLeaveBack: fixGsap,
-});
-
-function fixGsap() {
-    let nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
-    nationalities.forEach((item, index) => {
-        console.log(index);
-        document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
-    });
-}
 
 
 
