@@ -250,9 +250,14 @@ ScrollTrigger.create({
 });
 
 function fixGsap() {
-    console.log('вышли');
-    document.querySelectorAll('.main-3s__sticky-img').style.opacity = "0";
+    nationalities.forEach((item, index) => {
+        console.log(index);
+        document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+    });
 }
+
+
+
 
 
 // let wrapper3s = document.querySelector('.main-3s')
