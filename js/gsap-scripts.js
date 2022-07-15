@@ -65,21 +65,21 @@ function initLocomotiveScroll() {
 
 
 
-
-
-
-
       locomotiveScroll.on('scroll', (args) => {
-          // Get all current elements : args.currentElements
           if(typeof args.currentElements['triggerSection'] === 'object') {
               let progress = args.currentElements['triggerSection'].progress;
               console.log(progress);
-              // ouput log example: 0.34
-              // gsap example : myGsapAnimation.progress(progress);
+
+
+              if (progress >= 0.1 && progress <= 0.9) {
+                  nationalities.forEach((item, index) => {
+                      document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+                  });
+              }
+
+
           }
       });
-
-
 
 
 
