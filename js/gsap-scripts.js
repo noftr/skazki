@@ -146,20 +146,20 @@ function initLocomotiveScroll() {
 
 
       // fix bug with GSAP
-      ScrollTrigger.create({
-        trigger: ".trigger__slide-is2",
-        scroller: ".scroll-wrapper",
-        start: 'top 0%',
-        end: 'bottom 80%',
-        onLeave: fixGsap,
-        onLeaveBack: fixGsap,
-      });
-
-      function fixGsap() {
-          nationalities.forEach((item, index) => {
-              document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
-          });
-      }
+      // ScrollTrigger.create({
+      //   trigger: ".trigger__slide-is2",
+      //   scroller: ".scroll-wrapper",
+      //   start: 'top 0%',
+      //   end: 'bottom 80%',
+      //   onLeave: fixGsap,
+      //   onLeaveBack: fixGsap,
+      // });
+      //
+      // function fixGsap() {
+      //     nationalities.forEach((item, index) => {
+      //         document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+      //     });
+      // }
 
   })
 
@@ -176,6 +176,19 @@ function initLocomotiveScroll() {
       scrollView.classList.remove('-touchable');
     }
   }
+
+  scroll.on('scroll', (args) => {
+      // Get all current elements : args.currentElements
+      if(typeof args.currentElements['triggerSection'] === 'object') {
+          let progress = args.currentElements['triggerSection'].progress;
+          console.log(progress);
+          // ouput log example: 0.34
+          // gsap example : myGsapAnimation.progress(progress);
+      }
+  });
+
+
+
 }
 
 window.addEventListener('load', ()=>{
@@ -249,27 +262,27 @@ if(window.screen.width < 992) {
 
 
         // fix bug with GSAP
-        ScrollTrigger.create({
-          trigger: ".trigger__slide-is2",
-          start: 'top 0%',
-          end: 'bottom 80%',
-          onLeave: fixGsap,
-          onLeaveBack: fixGsap,
-        });
-
-        function fixGsap() {
-            nationalities.forEach((item, index) => {
-                document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
-            });
-        }
-
-
-        anchorArea.addEventListener("click", scrollToEl);
-        function scrollToEl() {
-            let anchorPoint = document.querySelectorAll('.main-3s__anchor')[index];
-            anchorPoint.scrollIntoView({behavior: "smooth"});
-
-        };
+        // ScrollTrigger.create({
+        //   trigger: ".trigger__slide-is2",
+        //   start: 'top 0%',
+        //   end: 'bottom 80%',
+        //   onLeave: fixGsap,
+        //   onLeaveBack: fixGsap,
+        // });
+        //
+        // function fixGsap() {
+        //     nationalities.forEach((item, index) => {
+        //         document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+        //     });
+        // }
+        //
+        //
+        // anchorArea.addEventListener("click", scrollToEl);
+        // function scrollToEl() {
+        //     let anchorPoint = document.querySelectorAll('.main-3s__anchor')[index];
+        //     anchorPoint.scrollIntoView({behavior: "smooth"});
+        //
+        // };
     })
 
 }
