@@ -63,6 +63,27 @@ function initLocomotiveScroll() {
       textComing = document.querySelectorAll('.main-3s__text-coming')[index];
 
 
+
+
+
+
+
+
+      scroll.on('scroll', (args) => {
+          // Get all current elements : args.currentElements
+          if(typeof args.currentElements['triggerSection'] === 'object') {
+              let progress = args.currentElements['triggerSection'].progress;
+              // console.log(progress);
+              // ouput log example: 0.34
+              // gsap example : myGsapAnimation.progress(progress);
+          }
+      });
+
+
+
+
+
+
       // on enter
       gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
           scrollTrigger: {
@@ -284,22 +305,3 @@ if(window.screen.width < 992) {
     })
 
 }
-
-
-
-
-
-
-
-
-
-
-scroll.on('scroll', (args) => {
-    // Get all current elements : args.currentElements
-    if(typeof args.currentElements['triggerSection'] === 'object') {
-        let progress = args.currentElements['triggerSection'].progress;
-        console.log(progress);
-        // ouput log example: 0.34
-        // gsap example : myGsapAnimation.progress(progress);
-    }
-});
