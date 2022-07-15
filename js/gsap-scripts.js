@@ -235,3 +235,14 @@ if(window.screen.width < 992) {
     })
 
 }
+
+let wrapper3s = document.querySelector('.main-3s')
+gsap.to(document.querySelectorAll('.main-3s__sticky-img'),{opacity: 0, duration: .001, ease: 'none',
+    scrollTrigger: {
+        trigger: wrapper3s,
+        markers: true,
+        start: 'top 0%',
+        end: 'bottom 80%',
+        toggleActions: "reset play reset play",
+    },
+});
