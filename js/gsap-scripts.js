@@ -68,11 +68,11 @@ function initLocomotiveScroll() {
       locomotiveScroll.on('scroll', (args) => {
           if(typeof args.currentElements['triggerSection'] === 'object') {
               let progress = args.currentElements['triggerSection'].progress;
-              console.log(progress);
 
 
-              if (progress >= 0.1 && progress <= 0.9) {
-                  console.log('aaaaaa');
+
+              if (progress >= 0.9 && progress <= 0.1) {
+                  console.log('aaaaaa'+' '+progress);
                   nationalities.forEach((item, index) => {
                       document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
                   });
