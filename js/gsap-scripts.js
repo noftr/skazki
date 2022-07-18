@@ -184,7 +184,7 @@ function initLocomotiveScroll() {
 }
 
 window.addEventListener('load', ()=>{
-  const imagesWithLazyLoad = [...document.querySelectorAll("[loading='auto'], [loading='lazy']")]
+  const imagesWithLazyLoad = [...document.querySelectorAll("[loading='auto'], [loading='lazy']")];
   imagesWithLazyLoad.forEach(el=>{
     el.setAttribute('loading', 'eager')
   })
@@ -193,7 +193,7 @@ window.addEventListener('load', ()=>{
 if(window.screen.width < 992) {
 
     let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
-    const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
+    const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
 
     nationalities.forEach((item, index) => {
 
@@ -211,35 +211,35 @@ if(window.screen.width < 992) {
                 start: 'top center',
                 end: 'bottom center',
                 toggleActions: "restart none restart none",
-            },});
+        },});
         gsap.to(linkArea,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
             scrollTrigger: {
                 trigger: trigger,
                 start: 'top center',
                 end: 'bottom center',
                 toggleActions: "play reverse play reverse",
-            },});
+        },});
         gsap.to(textComing,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
             scrollTrigger: {
                 trigger: trigger,
                 start: 'top center',
                 end: 'bottom center',
                 toggleActions: "play reverse play reverse",
-            },});
+        },});
         gsap.to(icon,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
           scrollTrigger: {
               trigger: trigger,
               start: 'top center',
               end: 'bottom center',
               toggleActions: "play reverse play reverse",
-          },});
+        },});
         gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
             scrollTrigger: {
                 trigger: trigger,
                 start: 'top center',
                 end: 'bottom center',
                 toggleActions: "play reset play reset",
-            },});
+        },});
 
 
         // on leave
@@ -249,32 +249,36 @@ if(window.screen.width < 992) {
                 start: 'top center',
                 end: 'bottom center',
                 toggleActions: "reset play reset play",
-            },});
-
-
-
-        // fix bug with GSAP
-        // ScrollTrigger.create({
-        //   trigger: ".trigger__slide-is2",
-        //   start: 'top 0%',
-        //   end: 'bottom 80%',
-        //   onLeave: fixGsap,
-        //   onLeaveBack: fixGsap,
-        // });
-        //
-        // function fixGsap() {
-        //     nationalities.forEach((item, index) => {
-        //         document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
-        //     });
-        // }
-        //
-        //
-        // anchorArea.addEventListener("click", scrollToEl);
-        // function scrollToEl() {
-        //     let anchorPoint = document.querySelectorAll('.main-3s__anchor')[index];
-        //     anchorPoint.scrollIntoView({behavior: "smooth"});
-        //
-        // };
+        },});
     })
 
+    let mobTriggerSection = document.querySelector('.main-3s');
+    let startFixGsap = true;
+    let checkVisibleTrigger = function (target) {
+        let targetPosition = {
+            top: window.pageYOffset + target.getBoundingClientRect().top,
+            bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+        },
+        windowPosition = {
+            top: window.pageYOffset,
+            bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+
+        if (targetPosition.bottom > windowPosition.top && targetPosition.top < windowPosition.bottom) {
+            startFixGsap = true;
+        } else {
+            if (startFixGsap == true) {
+                nationalities.forEach((item, index) => {
+                    document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+                });
+                startFixGsap = false;
+            };
+        };
+    };
+
+    window.addEventListener('scroll', function() {
+        checkVisibleTrigger (mobTriggerSection);
+    });
+
+    checkVisibleTrigger (mobTriggerSection);
 }
