@@ -50,7 +50,7 @@ function initLocomotiveScroll() {
   let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
 
 
-  const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+  const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"];
 
   nationalities.forEach((item, index) => {
 
@@ -193,7 +193,7 @@ window.addEventListener('load', ()=>{
 if(window.screen.width < 992) {
 
     let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
-    const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+    const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"];
 
     nationalities.forEach((item, index) => {
 
