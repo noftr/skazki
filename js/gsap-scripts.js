@@ -9,7 +9,6 @@ if (mediaQuery.matches && !window.disableScroll && scrollWrapper) {
 mediaQuery.addListener(() => window.location.reload());
 
 
-
 function initLocomotiveScroll() {
   window.addEventListener('scroll', e => {
     console.log('scroll wrapper scroll', window.scrollY);
@@ -50,7 +49,9 @@ function initLocomotiveScroll() {
 
   let trigger, number, icon, iconWrapper, photo, anchorArea, linkArea;
 
+
   const nationalities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+
   nationalities.forEach((item, index) => {
 
       trigger = document.querySelectorAll('.main-3s__trigger')[index];
@@ -61,36 +62,6 @@ function initLocomotiveScroll() {
       anchorArea = document.querySelectorAll('.main-3s__anchor-area')[index];
       linkArea = document.querySelectorAll('.main-3s__link-area')[index];
       textComing = document.querySelectorAll('.main-3s__text-coming')[index];
-
-
-
-
-
-
-      // fix bug with GSAP
-
-      locomotiveScroll.on('scroll', (args) => {
-          if(typeof args.currentElements['triggerSection'] === 'object') {
-              let progress = args.currentElements['triggerSection'].progress;
-
-              if (progress >= 0.9) {
-                  console.log('aaaaaa');
-                  nationalities.forEach((item, index) => {
-                      document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
-                  });
-              } else if (progress <= 0.1){
-                  console.log('aaaaaa');
-                  nationalities.forEach((item, index) => {
-                      document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
-                  });
-              }
-
-
-          }
-      });
-
-
-
 
       // on enter
       gsap.to(photo,{opacity: 1, duration: .001, ease: 'none',
@@ -173,23 +144,6 @@ function initLocomotiveScroll() {
           locomotiveScroll.scrollTo(document.querySelectorAll('.main-3s__anchor')[index], {'duration': 500});
       };
 
-
-      // fix bug with GSAP
-      // ScrollTrigger.create({
-      //   trigger: ".trigger__slide-is2",
-      //   scroller: ".scroll-wrapper",
-      //   start: 'top 0%',
-      //   end: 'bottom 80%',
-      //   onLeave: fixGsap,
-      //   onLeaveBack: fixGsap,
-      // });
-      //
-      // function fixGsap() {
-      //     nationalities.forEach((item, index) => {
-      //         document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
-      //     });
-      // }
-
   })
 
   function is_touch_enabled() {
@@ -207,14 +161,25 @@ function initLocomotiveScroll() {
   }
 
 
-
-
-
-
-
-
-
-
+  let startFixGsap = true;
+  locomotiveScroll.on('scroll', (args) => {
+      if(typeof args.currentElements['triggerSection'] === 'object') {
+          let progress = args.currentElements['triggerSection'].progress;
+          if (progress >= 0.9) {
+              nationalities.forEach((item, index) => {
+                  document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+              });
+              startFixGsap = false;
+          } else if (progress <= 0.1){
+              nationalities.forEach((item, index) => {
+                  document.querySelectorAll('.main-3s__sticky-img')[index].style.opacity = "0";
+              });
+              startFixGsap = false;
+          } else if (progress > 0.1 && progress < 0.9) {
+              startFixGsap = true;
+          }
+      }
+  });
 
 }
 
