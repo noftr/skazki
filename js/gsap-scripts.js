@@ -226,12 +226,26 @@ if(window.screen.width < 992) {
                 end: 'bottom center',
                 toggleActions: "play reverse play reverse",
         },});
+        gsap.to(textComing,{opacity: 1, duration: .2, ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: trigger,
+                start: 'top center',
+                end: 'bottom center',
+                toggleActions: "restart none restart none",
+        },});
         gsap.to(icon,{color: "#FFEE50", duration: .2, ease: "power2.inOut",
           scrollTrigger: {
               trigger: trigger,
               start: 'top center',
               end: 'bottom center',
               toggleActions: "play reverse play reverse",
+        },});
+        gsap.to(icon,{opacity: 1, duration: .2, ease: "power2.inOut",
+          scrollTrigger: {
+              trigger: trigger,
+              start: 'top center',
+              end: 'bottom center',
+              toggleActions: "restart none restart none",
         },});
         gsap.to(linkArea,{pointerEvents: "auto", duration: .001,
             scrollTrigger: {
@@ -243,6 +257,20 @@ if(window.screen.width < 992) {
 
 
         // on leave
+        gsap.to(textComing,{opacity: 0, duration: .2, ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: trigger,
+                start: 'top center',
+                end: 'bottom center',
+                toggleActions: "reset play reset play",
+        },});
+        gsap.to(icon,{opacity: 0, duration: .2, ease: "power2.inOut",
+          scrollTrigger: {
+              trigger: trigger,
+              start: 'top center',
+              end: 'bottom center',
+              toggleActions: "reset play reset play",
+        },});
         gsap.to(photo,{opacity: 0, duration: .001, ease: 'none',
             scrollTrigger: {
                 trigger: trigger,
